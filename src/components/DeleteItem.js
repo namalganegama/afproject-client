@@ -33,7 +33,7 @@ class deleteItem extends Component {
    
     // console.log("Print id: " + this.props.match.params.id);
  
-     axios.get('http://localhost:5000/api/panel/get/'+this.props.match.params.id)
+     axios.get('https://afproject-panelmember.herokuapp.com/api/panel/get/'+this.props.match.params.id)
        .then((res) => {
           //this.setState({...this.state, block: res.data})
           console.log(res.data)
@@ -93,7 +93,7 @@ setItemPresentation(e){
     console.log(editItems);
 
     axios
-      .delete('http://localhost:5000/api/panel/delete/'+this.props.match.params.id, editItems)
+      .delete('https://afproject-panelmember.herokuapp.com/api/panel/delete/'+this.props.match.params.id, editItems)
       .then(res => {
         this.props.history.push('/delete/'+this.props.match.params.id);
         alert('Item data deleted successfully');

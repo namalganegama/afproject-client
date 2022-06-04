@@ -30,7 +30,7 @@ class updateItem extends Component {
    
    // console.log("Print id: " + this.props.match.params.id);
 
-    axios.get('http://localhost:5000/api/panel/get/'+this.props.match.params.id)
+    axios.get('https://afproject-panelmember.herokuapp.com/api/panel/get/'+this.props.match.params.id)
       .then((res) => {
          //this.setState({...this.state, block: res.data})
          console.log(res.data)
@@ -93,7 +93,7 @@ setItemPresentation(e){
     console.log(editItems);
 
     axios
-      .put('http://localhost:5000/api/panel/update/'+this.props.match.params.id, editItems)
+      .put('https://afproject-panelmember.herokuapp.com/api/panel/update/'+this.props.match.params.id, editItems)
       .then(res => {
         this.props.history.push('/update/'+this.props.match.params.id);
         alert('Item data updated successfully');

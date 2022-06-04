@@ -25,7 +25,7 @@ export default function AddItem(){
         }
         // console.log(newItem);
 
-        axios.post("http://localhost:5000/api/panel/add",newItem)
+        axios.post("https://afproject-panelmember.herokuapp.com/api/panel/add",newItem)
         .then(() => {
           alert('Item data inserted successfully')
         })

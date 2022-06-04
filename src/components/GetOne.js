@@ -11,7 +11,7 @@ export default function GetOne(){
 
     useEffect(( )=> {
         function getItems() {
-            axios.get('http://localhost:5000/api/store/get/')
+            axios.get('https://afproject-panelmember.herokuapp.com/api/store/get/')
             .then((res) => {
                 console.log(res.data);
                 setItems(res.data);

@@ -9,7 +9,7 @@ export default function AllItems(){
 
     useEffect(( )=> {
         function getItems() {
-            axios.get("http://localhost:5000/api/panel/all")
+            axios.get("https://afproject-panelmember.herokuapp.com/api/panel/all")
             .then((res) => {
                 console.log(res.data);
                 setItems(res.data);
